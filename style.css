@@ -13,14 +13,14 @@ body {
     --white-color: white;
     --main-color: rgb(61, 118, 217);
     --light-black: rgb(38, 38, 38);
-    --light-gray: rgb(243, 243, 243);
+    --light-gray: rgb(244, 244, 244);
+    --notification-color: rgb(233, 70, 16);
 }
 
 .container {
     display: grid;
-    grid-template-columns: .6fr 5fr;
-    grid-template-rows: .5fr 5fr;
-    gap: 4px;
+    grid-template-columns: 300px 5fr;
+    grid-template-rows: 70px 5fr;
 }
 
 .nav-bar {
@@ -29,18 +29,24 @@ body {
     grid-column: 1 / 2;
     background-color: var(--accent-color);
     padding: 20px;
+    border-right: 1.25px solid var(--light-gray);
 }
 
 .header {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
-    background-color: red;
+    background-color: var(--white-color);
+    border-bottom: 1.25px solid var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
 .main-content {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    background-color: rgb(37, 204, 84);
+    background-color: var(--white-color);
 }
 
 .logo-header {
@@ -132,6 +138,7 @@ li {
     width: 50px;
     border-radius: 50%;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .profile p {
@@ -148,4 +155,85 @@ li {
     color: var(--main-color);
 }
 
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-gray);
+    padding: 4px 12px;
+    border-radius: 1rem;
+    gap: 4px;
+}
 
+.search-container input {
+    width: 250px;
+    height: 25px;
+    font-size: 14px;
+    border: none;
+    background-color: var(--light-gray);
+    font-family: "Open Sans";
+}
+
+#search-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-container input:focus {
+    outline: none;
+}
+
+.search-container svg {
+    width: 20px;
+}
+
+.right-section svg {
+    width: 25px;
+    cursor: pointer;
+}
+
+.header svg path {
+    fill: var(--light-black);
+}
+
+.header .right-section {
+    display: flex;
+    align-items: center;
+    gap: 24px
+}
+
+.header .img-container img {
+    width: 36px;
+}
+
+.header .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.notification-container {
+    
+    position: relative;
+}
+
+.notification-count {
+    position: absolute;
+    background-color: var(--notification-color);
+    right: -10px;
+    top: -10px;
+    font-size: 12px;
+    color: var(--white-color);
+    font-weight: 600;;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
