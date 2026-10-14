@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 
 
@@ -15,11 +15,14 @@ body {
     --light-black: rgb(38, 38, 38);
     --light-gray: rgb(244, 244, 244);
     --notification-color: rgb(233, 70, 16);
+    --main-content-bg: rgb(244, 247, 248);
+    --light-gray2: rgb(130, 130, 130);
+    --light-green: rgb(236, 243, 239);
 }
 
 .container {
     display: grid;
-    grid-template-columns: 300px 5fr;
+    grid-template-columns: 1fr 5fr;
     grid-template-rows: 70px 5fr;
 }
 
@@ -47,17 +50,14 @@ body {
 .main-content {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    background-color: var(--white-color);
+    background-color: var(--main-content-bg);
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-rows: 300px 1fr 2fr;
     padding: 24px;
     gap: 16px;
 }
 
-.main-content div {
-    border-radius: 1rem;
-}
 
 .logo-header {
     display: flex;
@@ -119,11 +119,17 @@ li {
     padding: 10px;
     transition: .2s;
     cursor: pointer;
+    font-family: "Montserrat";
 }
 
 .nav-menu li:hover {
     background-color: var(--light-gray);
     scale: 102%;
+    color: var(--main-color)
+}
+
+.nav-menu li:hover svg path {
+    fill: var(--main-color);
 }
 
 .nav-menu li:active {
@@ -259,13 +265,14 @@ li {
     align-items: center;
     overflow: hidden;
     position: relative;
-    
+    border-radius: 1rem;
+    min-width: 360px;
 }
 
 .welcome-banner-grid img {
-    height: 100%;
-    width: 100%;
     object-fit: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .welcome-message {
@@ -282,14 +289,14 @@ li {
 .welcome-message h2 {
     font-size: 34px;
     font-family: "Open Sans";
-    color: var(--light-black);
+    color: var(--white-color);
 }
 
 .welcome-message p {
     font-family: "Open Sans";
     font-size: 14px;
     line-height: 1.5;
-    color: var(--light-black);
+    color: var(--white-color);
 }
 
 .welcome-message button {
@@ -307,6 +314,7 @@ li {
 
 .welcome-message button:hover {
     scale: 103%;
+
 }
 
 .welcome-message button:active {
@@ -314,22 +322,195 @@ li {
 }
 
 .progress-tracker-grid {
-    background-color: rgb(81, 229, 31);
     grid-area: 2 / 1 / 3 / 2;
+    border-radius: 1rem;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 14px;
+}
+
+.progress-tracker-grid  > p {
+    align-self: flex-start;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.metric-cards-grp {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+/* .metric-cards-grp {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 6px;
+} */
+
+.metric-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 24px;
+    background-color: var(--white-color);
+    flex: 1;
+    min-width: 200px;
+    padding: 14px;
+    border-radius: .5rem;
+    border: 2px solid var(--light-gray);
+    cursor: pointer;
+    transition: .2s;
+}
+
+.metric-card:hover {
+    scale: 101%;
+    box-shadow: 0 2px 12px 0px rgba(0, 0, 0, 0.181);
+}
+
+.goal-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.goal-section .card-img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-tracker-grid svg {
+    width: 20px;
+}
+
+.progress-tracker-grid svg path,
+.stats p,
+.actual-section p {
+    fill: var(--light-black);
+    color: var(--light-black);
+}
+
+.stats p:nth-child(1) {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.stats p:nth-child(2),
+.actual-section p:nth-child(2) {
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.actual-section {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.actual-section p:nth-child(1){
+    font-size: 22px;
+    font-weight: 700;
 }
 
 .exercises-grid {
-    background-color: rgb(205, 26, 241);
+    background-color: var(--white-color);
     grid-area: 3 / 1 / 4 / 2;
-    
+    padding: 16px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 20px;
+}
+
+.exercise-days-grp {
+    display: flex;
+    gap: 6px;
+}
+
+.exercise-day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 12px;
+    border-radius: .35rem;
+}
+
+.exercise-day svg {
+    width: 12px;
+}
+
+.exercise-day p {
+    font-size: 14px; 
+    color: var(--main-color);
+}
+
+.exercise-day svg { 
+    fill: var(--main-color);
+}
+
+.exercise-days-grp div:nth-child(-n + 3) {
+    background-color: var(--light-green);
+}
+
+.exercise-days-grp div:nth-child(-n + 3) p {
+    color: var(--main-color);
+}
+
+.exercise-days-grp div:nth-child(-n + 3) svg {
+    fill: var(--main-color)
+}
+
+.exercise-days-grp div:nth-child(4) {
+    background-color: var(--main-color);
+}
+
+.exercise-days-grp div:nth-child(4) p {
+    color: var(--white-color);
+}
+
+.exercise-days-grp div:nth-child(4) svg {
+    fill: var(--white-color);
+}
+
+.exercise-cards-grp {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    flex: 1;
+}
+
+.exercise-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-green);
+    padding: 36px;
+    border-radius: .5rem;
+    flex: 1;  
+    flex-basis: 200px;
+}
+
+.exercise-card button {
+    align-self: stretch;
+    border-radius: .25rem;
 }
 
 .messages-grid {
     background-color: rgb(51, 26, 241);
-    grid-area: 1 / 2 / 2 / 3;
+    grid-area: 1 / 2 / 3 / 3;
 }
 
 .friends-list-grid {
     background-color: rgb(205, 187, 120);
-    grid-area: 2 / 2 / 4 / 3;
+    grid-area: 3 / 2 / 4 / 3;
 }
