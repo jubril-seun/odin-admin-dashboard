@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
-    <title>DropSet Admin Dashboard</title>
+    <title>DropSet User Dashboard</title>
 </head>
 <body>
     <main>
@@ -83,7 +83,7 @@
                         <div class="notification-count">12</div>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>bell-outline</title><path d="M10 21H14C14 22.1 13.1 23 12 23S10 22.1 10 21M21 19V20H3V19L5 17V11C5 7.9 7 5.2 10 4.3V4C10 2.9 10.9 2 12 2S14 2.9 14 4V4.3C17 5.2 19 7.9 19 11V17L21 19M17 11C17 8.2 14.8 6 12 6S7 8.2 7 11V18H17V11Z" /></svg>
                     </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>white-balance-sunny</title><path d="M3.55 19.09L4.96 20.5L6.76 18.71L5.34 17.29M12 6C8.69 6 6 8.69 6 12S8.69 18 12 18 18 15.31 18 12C18 8.68 15.31 6 12 6M20 13H23V11H20M17.24 18.71L19.04 20.5L20.45 19.09L18.66 17.29M20.45 5L19.04 3.6L17.24 5.39L18.66 6.81M13 1H11V4H13M6.76 5.39L4.96 3.6L3.55 5L5.34 6.81L6.76 5.39M1 13H4V11H1M13 20H11V23H13" /></svg>
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>white-balance-sunny</title><path d="M3.55 19.09L4.96 20.5L6.76 18.71L5.34 17.29M12 6C8.69 6 6 8.69 6 12S8.69 18 12 18 18 15.31 18 12C18 8.68 15.31 6 12 6M20 13H23V11H20M17.24 18.71L19.04 20.5L20.45 19.09L18.66 17.29M20.45 5L19.04 3.6L17.24 5.39L18.66 6.81M13 1H11V4H13M6.76 5.39L4.96 3.6L3.55 5L5.34 6.81L6.76 5.39M1 13H4V11H1M13 20H11V23H13" /></svg> -->
                      <div class="img-container" alt="profile photo">
                         <img src="imgs/104931587_10214252099976322_7649908564022810817_n.jpg">
                     </div>
@@ -170,6 +170,7 @@
                 </div>
                 
                 <div class="exercises-grid">
+                    <p>Your Workout</p>
                     <div class="exercise-days-grp">
                         <div class="exercise-day">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>check-circle</title><path d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M10 17L5 12L6.41 10.59L10 14.17L17.59 6.58L19 8L10 17Z" /></svg>
@@ -200,34 +201,95 @@
                             <button>Completed</button>
                         </div>
                         <div class="exercise-card completed">
-                            <p>Back Squat</p>
-                            <p>4 sets x 5 reps</p>
+                            <p>Bench Press</p>
+                            <p>5 sets x 6 reps</p>
                             <button>Completed</button>
                         </div>
-                        <div class="exercise-card completed">
-                            <p>Back Squat</p>
-                            <p>4 sets x 5 reps</p>
-                            <button>Completed</button>
+                        <div class="exercise-card inprogress">
+                            <p>Back Raises</p>
+                            <p>4 sets x 12 - 15 reps</p>
+                            <button>In progress</button>
                         </div>
-                        <div class="exercise-card completed">
-                            <p>Back Squat</p>
-                            <p>4 sets x 5 reps</p>
-                            <button>Completed</button>
+                        <div class="exercise-card not-started">
+                            <p>Leg Press</p>
+                            <p>4 sets x 12 - 15 reps</p>
+                            <button>Not started</button>
                         </div>
-                        <div class="exercise-card completed">
-                            <p>Back Squat</p>
-                            <p>4 sets x 5 reps</p>
-                            <button>Completed</button>
+                        <div class="exercise-card not-started">
+                            <p>Split Squats</p>
+                            <p>4 sets x 8 - 10 reps</p>
+                            <button>Not started</button>
                         </div>
-                        <div class="exercise-card completed">
-                            <p>Back Squat</p>
-                            <p>4 sets x 5 reps</p>
-                            <button>Completed</button>
+                        <div class="exercise-card not-started">
+                            <p>Leg Raises</p>
+                            <p>4 sets x 12 - 15 reps</p>
+                            <button>Not started</button>
                         </div>
                     </div>
                 </div>
-                <div class="messages-grid"></div>
-                <div class="friends-list-grid"></div>
+                <div class="messages-grid">
+                    <p>Training Articles</p>
+                    <div class="blog-posts-grp">
+                        <div class=" blog-post post-1">
+                            <p>How To PR On The Platform</p>
+                            <p>Set yourself up for the best performance where it counts the most, on the competition platform.</p>
+                            <button>Read Now</button>
+                        </div>
+                        <div class=" blog-post post-2">
+                            <p>Selecting and Progressing Your Weights</p>
+                            <p>Strategically select your weights for more success in training.</p>
+                            <button>Read Now</button>
+                        </div>
+                        <div class=" blog-post post-3">
+                            <p>4 Ways To Deal With Failure</p>
+                            <p>Better overcome setbacks with these tips from a World Champion</p>
+                            <button>Read Now</button>
+                        </div>
+                    </div>
+                    <button class="see-more-btn">See More</button>
+                </div>
+                <div class="discover-list-grid">
+                    <p>Discover</p>
+                    <div class="discover-grp">
+                        <div class="profile-grp profile-1">
+                            <div class="avatar-container">
+                                <img src="imgs/anastase-maragos-HyvE5SiKMUs-unsplash.jpg">
+                            </div>
+                            <div class="profile-info">
+                                <p>Jerald Williams</p>
+                                <p>Strength and Conditioning</p>
+                            </div> 
+                        </div>
+                        <div class="profile-grp profile-2">
+                            <div class="avatar-container">
+                                <img src="imgs/luke-witter-k47w6BeapCs-unsplash.jpg">
+                            </div>
+                            <div class="profile-info">
+                                <p>Thomas Guiles</p>
+                                <p>Gameday Coaching</p>
+                            </div> 
+                        </div>
+                        <div class="profile-grp profile-3">
+                            <div class="avatar-container">
+                                <img src="imgs/sven-mieke-jO6vBWX9h9Y-unsplash.jpg">
+                            </div>
+                            <div class="profile-info">
+                                <p>Erika Martel</p>
+                                <p>Physical Therapy and Rehab</p>
+                            </div> 
+                        </div>
+                        <div class="profile-grp profile-4">
+                            <div class="avatar-container">
+                                <img src="imgs/spencer-davis-0ShTs8iPY28-unsplash.jpg">
+                            </div>
+                            <div class="profile-info">
+                                <p>Lori Moore</p>
+                                <p>Athletic Mindset</p>
+                            </div> 
+                        </div>
+                        <button class="see-more-btn">See More</button>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
